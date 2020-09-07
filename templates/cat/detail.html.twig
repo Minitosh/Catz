@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+<div class="detail-container">
+    <div class="detail-image-container">
+        <img class="img-detail" src="{{ asset('img/' ~ cat.filename) }}">
+    </div>
+    <div class="detail-text-container">
+        <p class="name">{{ cat.name }}</p>
+        <p>{{ cat.description }}</p>
+        <p class="price">{{ cat.price }} €</p>
+        <p class="date">{{ cat.dateCreated|date("d/m/Y") }}</p>
+    </div>
+</div>
+{% endblock %}

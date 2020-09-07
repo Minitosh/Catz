@@ -2,11 +2,28 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}Catz{% endblock %}</title>
+
+        <link rel="icon" href={{ asset("favicon.ico") }} />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href={{ asset("css/app.css") }}>
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container">
+            <header class="header">
+                <a href={{ path("home")}}>
+                    <img class="logo" src={{ asset("logo.png") }}>
+                </a>
+                <h1>Catz</h1>
+                <nav class="nav-bar">
+                    <a href="">{{ "A Propos"|upper }}</a>
+                </nav>
+            </header>
+            {% block body %}{% endblock %}
+        </div>
     </body>
 </html>

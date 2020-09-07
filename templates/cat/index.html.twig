@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+<div class="card-grid">
+     {% for cat in cats %}
+        <a href={{ path('cat_detail', {'id': cat.id})}}>
+            <div class="card">
+                <img class="card-image" src="{{ asset('img/' ~ cat.filename) }}">
+                <h4>{{ cat.name }}</h4>
+            </div>
+        </a>
+    {% endfor %}   
+</div>
+{% endblock %}

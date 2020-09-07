@@ -1,0 +1,90 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1{
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.logo{
+    width: 140px;
+    height: 120px;
+}
+
+.nav-bar{
+    float: right;
+}
+
+.card-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card-grid a{
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    background-color: #EEEAE9;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+.card-image{
+    width: 240px;
+    height: 150px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.detail-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail-image-container{
+    width: 50%;
+    padding: 20px;
+}
+
+.detail-text-container{
+    width: 50%;
+    padding: 20px;
+}
+
+.img-detail{
+    width: 100%;
+}
+
+.name{
+    font-size: 2.5em;
+}
+
+.price{
+    font-size: 3em;
+    font-weight: bold;
+    color: #A081A9;
+}
+
+.date{
+    color: grey;
+}
