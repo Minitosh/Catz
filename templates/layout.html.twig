@@ -15,19 +15,42 @@
     <body>
         <div class="container">
             <header class="header">
-                <a href={{ path("home")}}>
-                    <img class="logo" src={{ asset("logo.png") }}>
-                </a>
-                <h1>Catz</h1>
+                <div class="logo-container">
+                    <a href={{ path("home")}}>
+                        <img class="logo" src={{ asset("logo.png") }}>
+                    </a>
+                    <h1>Catz</h1>
+                </div>
                 <nav class="nav-bar">
+                    <input
+                            name="search"
+                            id="search"
+                            placeholder="Rechercher"
+                            class="search-input"
+                            data-ajax-url="{{ url('api_search') }}"
+                    />
                     {% if app.user %}
-                        <a href={{ path('app_logout') }}>{{ "Déconnexion"|upper }} ({{ app.user.username }})</a>
+                        <div class="nav-bar-user">
+                            {#href={{ path('cart') }}#}
+                            <a class="nav-bar-cart">
+                                <img class="cart" src={{ asset("supermarket.png") }}>
+                            </a>
+                            <a href={{ path('app_logout') }}>{{ "Déconnexion"|upper }} ({{ app.user.username }})</a>
+                        </div>
                     {% else %}
                         <a href={{ path('user_register') }}>{{ "Inscription/Connexion"|upper }}</a>
                     {% endif %}
                 </nav>
             </header>
-            {% block body %}{% endblock %}
+            {% block body %}
+            {% endblock %}
+            <a href="{{ path('cat_add') }}" title="Ajouter une annonce" class="add-button">
+                <img src="{{ asset('add.png') }}"/> Ajouter une annonce
+            </a>
         </div>
+        {% block javascripts %}
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script src="{{ asset('js/app.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

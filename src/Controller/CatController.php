@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Cat;
+use App\Form\CatType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -32,5 +33,20 @@ class CatController extends AbstractController
         return $this->render('cat/detail.html.twig', [
             "cat" => $cat
         ]);
+    }
+
+    /**
+     * @Route("/add", name="cat_add")
+     */
+    public function addCat(Request $request)
+    {
+       $cat = new Cat();
+       $catForm = $this->createForm(CatType::class, $cat);
+
+       $catForm->handleRequest($request);
+
+       if ($catForm->isSubmitted() && $catForm->isValid()){
+           
+       }
     }
 }

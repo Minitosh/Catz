@@ -8,6 +8,7 @@
         <p class="name">{{ cat.name }}</p>
         <p>{{ cat.description }}</p>
         <p class="price">{{ cat.price }} €</p>
+        <button id="cart-add-button" data-cat-id="{{ cat.id }}" data-ajax-url="{{ url('api_add_to_cart') }}">Ajouter au panier</button>
         <p class="date">{{ cat.dateCreated|date("d/m/Y") }}</p>
     </div>
 </div>

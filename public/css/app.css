@@ -3,12 +3,23 @@ body {
     background-size: cover;
 }
 
+a{
+    text-decoration: none;
+    color: #A081A9;
+    font-size: 0.8em;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    font-size: 1.3em;
 }
 
 .header h1{
@@ -22,8 +33,26 @@ body {
     height: 120px;
 }
 
+.logo-container{
+    display: flex;
+    flex-direction: row;
+}
+
 .nav-bar{
     float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar-cart{
+    cursor: pointer;
 }
 
 .card-grid{
@@ -73,6 +102,7 @@ body {
 
 .img-detail{
     width: 100%;
+    border-radius: 25px;
 }
 
 .name{
@@ -93,10 +123,63 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: 1.5em;
 }
 
 .registration-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.registration-login-img{
+    width: 100px;
+}
+
+button{
+    background-color: #A081A9;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: none;
+    border: none;
+    font-size: 1.7em;
+}
+
+button:hover{
+    background-color: #C3ADC9;
+    cursor: pointer;
+}
+
+.cart{
+    width: 50px;
+    margin-right: 30px;
+}
+
+.search-input{
+    margin-right: 40px;
+    font-size: 1em;
+}
+
+.add-button{
+    position: sticky;
+    border-radius: 5px;
+    bottom: 10px;
+    float: right;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    color: white;
+    background-color: #A081A9;
+    padding: 10px;
+}
+
+.add-button img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.add-button:hover{
+    background-color: #C3ADC9;
 }

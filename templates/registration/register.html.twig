@@ -6,18 +6,25 @@
     {% endfor %}
 
     <div class="registration-container">
-        <img alt="Register" src={{ asset('img/register.png') }}/>
+        <img class="registration-login-img" alt="Register" src="{{ asset('register.png') }}"/>
         <h1>Inscription</h1>
 
         <div class="registration-form">
             {{ form_start(registrationForm) }}
-            {{ form_row(registrationForm.email) }}
-            {{ form_row(registrationForm.username) }}
-            {{ form_row(registrationForm.plainPassword, {
-                label: 'Password'
-            }) }}
-
-            <button type="submit" class="btn">Register</button>
+            <div>
+                {{ form_row(registrationForm.email) }}
+            </div>
+            <div>
+                {{ form_row(registrationForm.username) }}
+            </div>
+            <div>
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+            </div>
+            <div>
+                <button type="submit" class="btn">Register</button>
+            </div>
             {{ form_end(registrationForm) }}
             <p>Déjà un compte ? </p>
             <a href={{ path('app_login') }}>{{ "Connexion"|upper }}</a>
