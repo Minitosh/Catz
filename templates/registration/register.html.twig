@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <div class="registration-container">
+        <img alt="Register" src={{ asset('img/register.png') }}/>
+        <h1>Inscription</h1>
+
+        <div class="registration-form">
+            {{ form_start(registrationForm) }}
+            {{ form_row(registrationForm.email) }}
+            {{ form_row(registrationForm.username) }}
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Password'
+            }) }}
+
+            <button type="submit" class="btn">Register</button>
+            {{ form_end(registrationForm) }}
+            <p>Déjà un compte ? </p>
+            <a href={{ path('app_login') }}>{{ "Connexion"|upper }}</a>
+        </div>
+    </div>
+{% endblock %}

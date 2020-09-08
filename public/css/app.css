@@ -29,7 +29,7 @@ body {
 .card-grid{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .card-grid a{
@@ -87,4 +87,16 @@ body {
 
 .date{
     color: grey;
+}
+
+.registration-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.registration-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

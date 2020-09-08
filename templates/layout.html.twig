@@ -20,7 +20,11 @@
                 </a>
                 <h1>Catz</h1>
                 <nav class="nav-bar">
-                    <a href="">{{ "A Propos"|upper }}</a>
+                    {% if app.user %}
+                        <a href={{ path('app_logout') }}>{{ "Déconnexion"|upper }} ({{ app.user.username }})</a>
+                    {% else %}
+                        <a href={{ path('user_register') }}>{{ "Inscription/Connexion"|upper }}</a>
+                    {% endif %}
                 </nav>
             </header>
             {% block body %}{% endblock %}
