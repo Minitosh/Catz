@@ -6,24 +6,32 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\CatRepository;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class ApiController extends AbstractController
 {
     /**
      * @Route("/api/v1/search", name="api_search")
      */
-    public function search(Request $request)
+    public function search(Request $request, CatRepository $catRepository)
     {
-        $json = $request->getContent();
-        $data = json_decode($json);
-        $searchContent = $data->content;
+        $keyword = $request->query->get('keyword');
+        $foundCats = $catRepository->search($keyword);
 
-        return new JsonResponse([
-            "status" => "ok",
-            "data" => [
-                $searchContent
-            ]
-        ]);
+        var_dump($foundCats);
+
+        foreach($foundCats as &$foundCat){
+            $detailUrl = $this->generateUrl('cat_detail', ['id' => $foundCat->getId()]);
+            $foundCat->setUrl($detailUrl);
+        }
+
+        $serializer = new Serializer([new ObjectNormalizer()], [new JsonEncoder()]);
+        $jsonContent = $serializer->serialize(['cats' => $foundCats], 'json', ['ignored_attributes' => ['dateCreated']]);
+
+        return JsonResponse::fromJsonString($jsonContent);
     }
 
     /**

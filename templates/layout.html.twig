@@ -23,12 +23,13 @@
                 </div>
                 <nav class="nav-bar">
                     <input
-                            name="search"
-                            id="search"
+                            name="keyword"
+                            id="keyword"
                             placeholder="Rechercher"
                             class="search-input"
                             data-ajax-url="{{ url('api_search') }}"
                     />
+                    <div id="results"></div>
                     {% if app.user %}
                         <div class="nav-bar-user">
                             {#href={{ path('cart') }}#}

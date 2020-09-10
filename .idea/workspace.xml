@@ -20,18 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54695ed5-4bc8-462f-a88e-f1cd91b8c757" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/supermarket.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cat/detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cat/detail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CatRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +189,8 @@
       <option name="presentableId" value="Default" />
       <updated>1599518110675</updated>
       <workItem from="1599518112343" duration="4942000" />
-      <workItem from="1599548081736" duration="10526000" />
+      <workItem from="1599548081736" duration="11180000" />
+      <workItem from="1599729273925" duration="2399000" />
     </task>
     <servers />
   </component>
